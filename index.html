@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Hub 📊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6b7280, #3b82f6, #a855f7);
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .tableau-placeholder {
+            min-height: 400px;
+            background: linear-gradient(45deg, #e5e7eb, #f3e8ff);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold">Data Analytics Hub 🚀</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-yellow-300 transition">Home 🏠</a>
+                    <a href="#dashboards" class="hover:text-yellow-300 transition">Dashboards 📈</a>
+                    <a href="#about" class="hover:text-yellow-300 transition">About 🙋‍♂️</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition">Contact 📬</a>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-md focus:outline-none">
+                    <svg id="sun-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-7-8a1 1 0 011-1h1a1 1 0 110 2H4a1 1 0 01-1-1zm12 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zm-2.536-5.95l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 01-1.414 1.414zM5.05 14.464l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 111.414 1.414z" />
+                    </svg>
+                    <svg id="moon-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Unlock Insights with Data Analytics! 🌟</h1>
+            <p class="text-lg md:text-xl mb-6">Dive into interactive Tableau dashboards that turn raw data into compelling stories. 📊</p>
+            <a href="#dashboards" class="inline-block bg-yellow-400 text-gray-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 transition bounce">Explore Dashboards 🎉</a>
+        </div>
+    </section>
+
+    <!-- Dashboards Section -->
+    <section id="dashboards" class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Interactive Data Dashboards 📈</h2>
+            <p class="text-lg text-center mb-12">Discover my curated collection of Tableau Public dashboards, each designed to reveal powerful insights with a touch of fun! 😄</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dashboard 1 -->
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 card-hover fade-in">
+                    <h3 class="text-xl font-semibold mb-4">Sales Performance Dashboard 💼</h3>
+                    <div class='tableauPlaceholder' id='viz1' style='position: relative'>
+                        <noscript><a href='#'><img alt='Sales Performance Dashboard' src='https://public.tableau.com/static/images/_1/_17536329894300/sheet9/1_rss.png' style='border: none' /></a></noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='_17536329894300/sheet9' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/_1/_17536329894300/sheet9/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                            <param name='filter' value='publish=yes' />
+                        </object>
+                    </div>
+                    <p class="mt-4">Visualizes sales trends, regional performance, and key metrics to drive business growth. 🚀</p>
+                </div>
+                <!-- Dashboard 2 -->
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 card-hover fade-in">
+                    <h3 class="text-xl font-semibold mb-4">Customer Insights Dashboard 😊</h3>
+                    <div class='tableauPlaceholder' id='viz2' style='position: relative'>
+                        <noscript><a href='#'><img alt='Customer Insights Dashboard' src='https://public.tableau.com/static/images/_1/_17536329093790/sheet8/1_rss.png' style='border: none' /></a></noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='_17536329093790/sheet8' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/_1/_17536329093790/sheet8/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                            <param name='filter' value='publish=yes' />
+                        </object>
+                    </div>
+                    <p class="mt-4">Explores customer behavior, demographics, and satisfaction metrics with interactive visuals. 🌟</p>
+                </div>
+                <!-- Dashboard 3 -->
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 card-hover fade-in">
+                    <h3 class="text-xl font-semibold mb-4">Market Trends Dashboard 📉</h3>
+                    <div class='tableauPlaceholder' id='viz3' style='position: relative'>
+                        <noscript><a href='#'><img alt='Market Trends Dashboard' src='https://public.tableau.com/static/images/_1/_17536328520760/sheet7/1_rss.png' style='border: none' /></a></noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='_17536328520760/sheet7' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/_1/_17536328520760/sheet7/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                            <param name='filter' value='publish=yes' />
+                        </object>
+                    </div>
+                    <p class="mt-4">Tracks market dynamics and forecasts trends with engaging, data-driven visuals. 🔍</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">About Your Data Wizard 🧙‍♂️</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 fade-in">
+                <div class="md:w-1/2">
+                    <p class="text-lg">I'm a passionate data analyst with a knack for turning numbers into stories! 📖 With years of experience in data visualization, I specialize in creating Tableau dashboards that make insights pop. 💥</p>
+                    <p class="mt-4">From startups to enterprises, I’ve helped clients uncover hidden opportunities through data. Let’s make your data shine! ✨</p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-64 rounded-lg flex items-center justify-center">
+                        <p class="text-white">Placeholder for Profile Image 😎</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-3xl font-bold mb-8">Let’s Connect! 📬</h2>
+            <p class="text-lg mb-6">Got a data challenge or project? Drop me a line, and let’s create something amazing together! 🚀</p>
+            <a href="mailto:your.email@example.com" class="inline-block bg-yellow-400 text-gray-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 transition">Contact Me 😄</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Data Analytics Hub. Built with 💖 for data lovers!</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle, Animations, and Tableau Embedding -->
+    <script>
+        // Theme Toggle
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            html.classList.remove('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                localStorage.setItem('theme', 'light');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        });
+
+        // Scroll Animation Trigger
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Tableau Embedding Script
+        function initViz() {
+            var containerDiv1 = document.getElementById("viz1"),
+                url1 = "https://public.tableau.com/views/_17536329894300/sheet9?:language=en-US&:display_count=n&:origin=viz_share_link",
+                options1 = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Tableau Viz 1 loaded");
+                    }
+                };
+            var viz1 = new tableau.Viz(containerDiv1, url1, options1);
+
+            var containerDiv2 = document.getElementById("viz2"),
+                url2 = "https://public.tableau.com/views/_17536329093790/sheet8?:language=en-US&:display_count=n&:origin=viz_share_link",
+                options2 = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Tableau Viz 2 loaded");
+                    }
+                };
+            var viz2 = new tableau.Viz(containerDiv2, url2, options2);
+
+            var containerDiv3 = document.getElementById("viz3"),
+                url3 = "https://public.tableau.com/views/_17536328520760/sheet7?:language=en-US&:display_count=n&:origin=viz_share_link",
+                options3 = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Tableau Viz 3 loaded");
+                    }
+                };
+            var viz3 = new tableau.Viz(containerDiv3, url3, options3);
+        }
+    </script>
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js" onload="initViz();"></script>
+</body>
+</html>
